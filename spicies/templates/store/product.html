@@ -1,0 +1,184 @@
+{% extends "../base.html"%}
+
+
+{%load static %}
+
+
+{% block title%} Product {%endblock %}
+
+
+{%block content%}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/easyzoom@2.5.3/css/easyzoom.css" />
+<script src="https://cdn.jsdelivr.net/npm/easyzoom@2.5.3/src/easyzoom.js"></script>
+
+<link href="{% static 'store/style.css' %}" rel="stylesheet">
+<main class="pt-2">
+
+    <style type='text/css'>
+        /* CSS to defines your number of messages */
+       
+       .stretch-card>.card{width: 100%;min-width: 100%}body{background-color: #f9f9fa}.flex{-webkit-box-flex: 1;-ms-flex: 1 1 auto;flex: 1 1 auto}@media (max-width:1191.98px){.padding{padding: 1.5rem}}@media (max-width:967.98px){.padding{padding: 1rem}}.padding{padding: 3rem}.card .card-title{color: #000000;margin-bottom: 0.625rem;text-transform: capitalize;font-size: 0.875rem;font-weight: 500}.card .card-description{margin-bottom: .875rem;font-weight: 400;color: #76838f}.mainimage{width: 400 !important}
+  
+      </style>
+
+  <div class="container" style="max-width: 1000px">
+
+    <div class="row g-3">
+
+          <div class="page-content page-container" id="page-content">
+            <div class="padding">
+                <div class="row container d-flex justify-content-center">
+                    <div class="col-md-10 grid-margin stretch-card">
+                        <div class="card">
+                            <div class="card-body">
+                              <div class="easyzoom easyzoom--overlay">
+                                <div class="center">
+                                  <div class="messages  " >
+                                    <small>-{{ product.discountprecent }} %</small>     
+                                  </div>
+                                  
+                              </div>
+                                <a href="{{ product.img.url }}"> 
+                                <img class="mainimage"  src="{{ product.img.url }}" height="400" /> 
+                              </a>
+                              </div>
+                              <h1 class="mb-0 h2 pe-4 pb-4">{{ product.title }}</h1>
+                                <p class="card-description">{{product.describtion}}</p>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-body p-4">
+          <div class="d-grid gap-2">
+          <div class="d-flex d-flex-inline justify-content-between">
+          
+          <s><div class="d-flex justify-content-between align-items-center" style="color : red ;">EG{{product.price}}</div></s>
+                 <div class="">
+                              <label for="select">Qty</label>
+                              <select id="select" class="h6" style="width:50px;height:40px;">
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                  <option value="4">4</option>
+                              </select>
+                  </div>
+                  <h3>Eg {{product.}}</h3>
+          </div>
+          <hr>
+          <button type="button" id="add-button" value="{{product.id}}" class="btn btn-success fw500">Add to basket</button>
+          <button type="button" id="add-button" value="{{product.id}}" class="btn btn-light fw500">Add to Favorites</button>
+          </div>
+      </div>
+
+
+        </div>
+    </div>
+ 
+
+    
+
+      
+      
+      
+      
+        <div class="container">
+          <div class="pb-3 h5">Related </div>
+            <div class=" row row-cols-1 row-cols-md-4 ">
+                {% for product in prods %}
+            
+                <div class="col mb-4 ">
+                  <a href="{{product.get_prod_url}}" class="text-decoration-none"></a>
+                    <div class="card product_item">
+                        <div class="body">
+                            <div class="cp_img">
+                                <div class="center">
+                                    <div class="messages  " >
+                                      <small>-{{ product.discountprecent }} %</small>     
+                                    </div>
+                                </div>
+        
+                                <img src="{{ product.img.url }}" alt="Product" class="img-fluid">
+                                <div class="hover">
+                                    <button type="button" data-id="{{product.id}}" id="addone" value="{{product.id}}" class="btn btn-success fw500">
+                                        <i class="zmdi zmdi-shopping-cart"></i>
+                                    </button>   
+                                </div>
+                            </div>
+                            <div class="product_details">
+                                <h5><a class="text-decoration-none" href="{{product.get_prod_url}}">{{product.title|slice:":50" }}</a></h5>
+                                <ul class="product_price list-unstyled">
+                                    <li class="old_price">EG{{product.price}}</li>
+                                    <li class="new_price">EG{{product.afterdiscont}}</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div>
+                  </a>
+                </div>
+            
+                {%endfor%}
+                
+            </div>
+        </div>
+
+</main>
+
+{% block javascript %}
+<script>
+    $(document).on('click', '#add-button', function (e) {
+        e.preventDefault();
+
+        $.ajax({
+            type: 'POST',
+            url: '{% url "basket:basket_add" %}',
+            data: {
+                productid: $('#add-button').val(),
+                productqty: $('#select option:selected').text(),
+                csrfmiddlewaretoken: "{{csrf_token}}",
+                action: 'post'
+            },
+            success: function (json) {
+               document.getElementById("basket-qty").innerHTML = json.qty
+
+            },
+            error: function (xhr, errmsg, err) {}
+        });
+    })
+
+    $(document).ready(function() {
+		var $easyzoom = $('.easyzoom').easyZoom();
+});
+</script>
+
+
+<script>
+  $(document).on('click', '#addone', function (e) {
+      var id = $(this).data("id")
+      e.preventDefault();
+
+      $.ajax({
+          type: 'POST',
+          url: "{% url 'basket:adding' %}",
+          data: {
+              productid:id,
+              
+              csrfmiddlewaretoken: "{{csrf_token}}",
+              action: 'post'
+          },
+          success: function (json) {
+             document.getElementById("basket-qty").innerHTML = json.qty
+
+          },
+          error: function (xhr, errmsg, err) {}
+      });
+  })
+</script>
+{%endblock javascript%}
+
+
+
+{%endblock%}

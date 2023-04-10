@@ -1,0 +1,104 @@
+{% extends "../base.html" %}
+{% load static %}
+{% block title %}Place Order{% endblock %}
+{% block content %}
+
+<style>
+  .account-form input
+    {
+    border: 2px solid #ccc;
+    height: calc(2em + .75rem + 2px);
+  }
+
+  .form-control {
+    border: 2px solid #ccc;
+  }
+
+  .account-form input:focus {
+    border-color: #1497ff;
+    box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075), 0 0 0px rgba(255, 0, 0, 0.6);
+  }
+</style>
+
+<div class="container-fluid">
+  <div class="row no-gutter">
+    <div class="col-md-12">
+      <div class="login d-flex align-items-center py-5">
+        <div class="container">
+          <div class="row">
+            <div id="payment-form" class="col-12 col-lg-6 mx-auto">
+              <h3 class="mb-3">Billing address</h3>
+              <!-- Error messages in this element -->
+              <div id="card-errors" class="a" role="alert"></div>
+              <form class="account-form p-4 rounded" action="{% url 'order:placeorder' %}" method="post">
+                {% csrf_token %}
+                {% if form.errors %}
+                <p>Please correct the following errors:</p>
+                {% for field in form %}
+                {% if field.errors %}
+                <div class="alert alert-primary" role="alert">
+                  {{ field.label }}: {{ field.errors|striptags }}
+                </div>
+                {% endif %}
+                {% endfor %}
+                {% endif %}
+
+
+
+
+                <div class="row g-3">
+                  <div class="col-sm-7">
+                    <label for="firstName" class="form-label">Customer Name</label>
+                    {{form.fullname}}
+
+                    <div class="invalid-feedback">
+                      Valid first name is required.
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="address" class="form-label">Address</label>
+                    {{form.address}}
+                    <div class="invalid-feedback">
+                      Please enter your shipping address.
+                    </div>
+                  </div>
+
+                  <div class="col-md-5">
+                    <label for="country" class="form-label">Country</label>
+                    <select class="form-select" id="country" required>
+                      <option value="">Choose...</option>
+                      <option>Egypt</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid country.
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="state" class="form-label">State</label>
+                    {{form.City}}
+                    <div class="invalid-feedback">
+                      Please provide a valid state.
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <label for="Postcode" class="form-label">Phone</label>
+                    {{form.Phone}}
+
+                  </div>
+                </div>
+
+                <hr class="my-4">
+                <button id="submit" class="btn btn-primary w-100 fw-bold">Place
+                  Order</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

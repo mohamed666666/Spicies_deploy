@@ -1,0 +1,78 @@
+{% extends "../base.html" %}
+{% load static %}
+{% block title %}Place Order{% endblock %}
+{% block content %}
+
+
+<style type='text/css'>
+    /* CSS to defines your number of messages */
+    .messages {
+         display: inline-block;
+         background: red;
+         text-align: center;
+         color: #FFF;
+         border-radius: 50%;
+         width: 24px;
+         height: 24px;
+         line-height: 26px;
+    }
+
+    .dives {
+  float: right;
+  padding: 15px;
+}
+ </style>
+
+<main>
+
+
+    <div class="container">
+      <div class="alert alert-primary fw600 rounded-0 border-1 py-3" role="alert">
+      </div>
+      <div class="container dives">
+        <div class="row">
+          <div class="album py-5">
+            <div class="pb-3">
+              <h1 class="h3"> Your order.</h1>
+            </div>
+            <div class="row row-cols-2 row-cols-sm-2 row-cols-md-5 g-3">
+                
+              {% for product ,qty in final %}
+
+              <div >
+             
+              <div class="col">
+                <a   href="{{ product.get_prod_url }}">
+                <div class="card border-0">
+                    
+                    <div class="container">
+                        <img class="img-fluid" width="" hight="" alt="Responsive image" src="{{ product.img.url }}">
+                        <div class="top-right">
+                            <div class="messages">
+                                {{ qty }}         
+                            </div>
+                        </div>
+                    </div>
+                  
+                  <div class="card-body px-0">
+                    <p class="card-text">
+                      <a class="text-dark text-decoration-none"
+                        href="{{ product.get_prod_url }}">{{ product.title|slice:":50" }}...</a>
+                    </p>
+                    <s><div  style="color : red ;">EG{{product.price}}</div></s>
+                    <div class="fw-bold">After Discount EG{{product.afterdiscont}}</div>
+                  </div>
+                </div>
+              
+              </div>
+            
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+
+{% endblock %}

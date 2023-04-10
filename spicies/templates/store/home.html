@@ -1,0 +1,116 @@
+{% extends "../base.html"%}
+
+
+{%load static %}
+
+
+{% block title%} Home{%endblock %}
+
+{% block content %}
+<link href="{% static 'store/style.css' %}" rel="stylesheet">
+<main>
+
+  <div class="container">
+      
+      <div class=" row row-cols-1 row-cols-md-4 ">
+          {% for product in products %}
+      
+          <div class="col mb-4 ">
+            <a href="{{product.get_prod_url}}" class="text-decoration-none"></a>
+              <div class="card product_item">
+                  <div class="body">
+                      <div class="cp_img">
+                          <div class="center">
+                              <div class="messages  " >
+                                <small>-{{ product.discountprecent }} %</small>     
+                              </div>
+                          </div>
+  
+                          <img src="{{ product.img.url }}" alt="Product" class="img-fluid">
+                          <div class="hover">
+                              <button type="button" data-id="{{product.id}}" id="addone" value="{{product.id}}" class="btn btn-success fw500">
+                                  <i class="zmdi zmdi-shopping-cart"></i>
+                              </button>   
+                          </div>
+                      </div>
+                      <div class="product_details">
+                          <h5><a class="text-decoration-none" href="{{product.get_prod_url}}">{{product.title|slice:":50" }}</a></h5>
+                          <ul class="product_price list-unstyled">
+                              <li class="old_price">EG{{product.price}}</li>
+                              <li class="new_price">EG{{product.afterdiscont}}</li>
+                          </ul>
+                      </div>
+                  </div>
+                  
+              </div>
+            </a>
+          </div>
+      
+          {%endfor%}
+          
+      </div>
+  </div>
+  
+    
+  
+
+  {% if products.has_other_pages %}
+  <ul class="pagination justify-content-center">
+    {% if products.has_previous %}
+      <li class="page-item"><a class="page-link"  href="?page={{ products.previous_page_number }}">&laquo;</a></li>
+    {% else %}
+      <li class="page-item"><span>&laquo;</span></li>
+    {% endif %}
+    {% for i in products.paginator.page_range %}
+      {% if products.number == i %}
+        <li class="page-item active" >
+          <span class="page-link">{{ i }} 
+            <span class="sr-only">
+            </span>
+          
+          </span></li>
+      {% else %}
+        <li><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+      {% endif %}
+    {% endfor %}
+    {% if users.has_next %}
+      <li class="page-item"> <a class="page-link" href="?page={{ products.next_page_number }}">&raquo;</a></li>
+    {% else %}
+      <li class="page-item"><span>&raquo;</span></li>
+    {% endif %}
+  </ul>
+{% endif %}
+
+
+
+</main>
+
+
+
+
+{% block javascript %}
+<script>
+    $(document).on('click', '#addone', function (e) {
+        var id = $(this).data("id")
+        e.preventDefault();
+
+        $.ajax({
+            type: 'POST',
+            url: "{% url 'basket:adding' %}",
+            data: {
+                productid:id,
+                
+                csrfmiddlewaretoken: "{{csrf_token}}",
+                action: 'post'
+            },
+            success: function (json) {
+               document.getElementById("basket-qty").innerHTML = json.qty
+
+            },
+            error: function (xhr, errmsg, err) {}
+        });
+    })
+</script>
+
+{%endblock javascript%}
+{%endblock%}
