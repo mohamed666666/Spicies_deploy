@@ -10,7 +10,7 @@ from store.models import Product
 
 
 
-@login_required
+
 def placeorder(request):
     basket = Basket(request)
     
