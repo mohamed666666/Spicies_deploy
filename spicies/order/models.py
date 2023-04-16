@@ -19,7 +19,7 @@ class order(models.Model):
     updated = models.DateTimeField(auto_now=True)
     total_paid = models.DecimalField(max_digits=20, decimal_places=2)
     discount=models.DecimalField(max_digits=20, decimal_places=2,default=0)
-    #order_key = models.CharField(max_length=200)
+   # order_key = models.CharField(max_length=200)
     billing_status = models.BooleanField(default=False)
 
     class Meta:
