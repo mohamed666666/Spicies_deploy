@@ -7,7 +7,7 @@ from store.models import Product
 # Create your models here.
 
 class order(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='order_user')
+    #user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='order_user')
     full_name = models.CharField(max_length=50)
     address1 = models.CharField(max_length=250)
     address2 = models.CharField(max_length=250)

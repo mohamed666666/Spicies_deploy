@@ -27,7 +27,7 @@ def placeorder(request):
             print(basket.get_total_paid())
             print(basket.get_total_after_discount())
         
-            ord=order.objects.create(user_id=user_id,full_name=order_creator_name,address1=address,
+            ord=order.objects.create(full_name=order_creator_name,address1=address,
                                      address2=address,city=city,
                                      phone=Phone,total_paid=basket.get_total_paid(),
                                     discount=basket.get_total_after_discount())
