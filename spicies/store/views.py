@@ -12,7 +12,7 @@ def homepages(request):
     product_list= Product.products.all()
     page = request.GET.get('page', 1)
 
-    paginator = Paginator(product_list, 28)
+    paginator = Paginator(product_list, 48)
 
     try:
         products = paginator.page(page)
