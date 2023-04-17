@@ -8,10 +8,16 @@
 
 {% block content %}
 <link href="{% static 'store/style.css' %}" rel="stylesheet">
-<main>
-  
+
+
   <div class="container">
-      
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-mdb-ride="carousel" style="margin-top: 0%;">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static 'img/cover.jpeg'%}" class="d-block w-100" alt="Wild Landscape" />
+        </div>
+      </div>
+    </div>
       <div class=" row row-cols-1 row-cols-md-4 ">
           {% for product in products %}
       
