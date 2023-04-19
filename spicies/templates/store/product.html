@@ -12,7 +12,7 @@
 <script src="https://cdn.jsdelivr.net/npm/easyzoom@2.5.3/src/easyzoom.js"></script>
 
 <link href="{% static 'store/style.css' %}" rel="stylesheet">
-<link href="{% static 'store/product.css' %}" rel="stylesheet">
+
 <main class="pt-2">
 
     <style type='text/css'>
@@ -170,7 +170,7 @@
               <p> <del> EG {{product.price}}  </del> </p>
               
               <span>
-                  <span>EG {{ product.discountprecent }}</span>
+                  <span>EG {{ product.afterdiscont }}</span>
                  
                   <label for="select">Qty</label>
                   <select id="select" class="h6" style="width:50px;height:40px;">
