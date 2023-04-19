@@ -12,74 +12,190 @@
 <script src="https://cdn.jsdelivr.net/npm/easyzoom@2.5.3/src/easyzoom.js"></script>
 
 <link href="{% static 'store/style.css' %}" rel="stylesheet">
+<link href="{% static 'store/product.css' %}" rel="stylesheet">
 <main class="pt-2">
 
     <style type='text/css'>
-        /* CSS to defines your number of messages */
-       
-       .stretch-card>.card{width: 100%;min-width: 100%}body{background-color: #f9f9fa}.flex{-webkit-box-flex: 1;-ms-flex: 1 1 auto;flex: 1 1 auto}@media (max-width:1191.98px){.padding{padding: 1.5rem}}@media (max-width:967.98px){.padding{padding: 1rem}}.padding{padding: 3rem}.card .card-title{color: #000000;margin-bottom: 0.625rem;text-transform: capitalize;font-size: 0.875rem;font-weight: 500}.card .card-description{margin-bottom: .875rem;font-weight: 400;color: #76838f}.mainimage{width: 400 !important}
-  
+     .product-details{
+	overflow:hidden;
+}
+
+
+#similar-product {
+  margin-top: 40px;
+}
+
+
+#reviews {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.product-details {
+  margin-bottom: 40px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+
+
+.view-product {
+  position: relative;
+}
+
+.view-product img {
+  border: 1px solid #F7F7F0;
+  height: 380px;
+  width: 100%;
+}
+
+.view-product h3 {
+  background: #FE980F;
+  bottom: 0;
+  color: #FFFFFF;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 0;
+  padding: 8px 20px;
+  position: absolute;
+  right: 0;
+}
+
+#similar-product .carousel-inner .item{
+	padding-left:0px;
+}
+
+#similar-product .carousel-inner .item img {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.item-control {
+  position: absolute;
+  top: 35%;
+}
+.item-control i {
+  background: #FE980F;
+  color: #FFFFFF;
+  font-size: 20px;
+  padding: 5px 10px;
+}
+
+.item-control i:hover{
+	background:#ccccc6;
+}
+
+.product-information {
+  border: 1px solid #F7F7F0;
+  overflow: hidden;
+  padding-bottom: 60px;
+  padding-left: 60px;
+  padding-top: 60px;
+  position: relative;
+}
+
+.newarrival{
+	position:absolute;
+	top:0;
+	left:0
+}
+
+.product-information h2 {
+  color: #363432;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  margin-top: 0;
+}
+
+.product-information p {
+  color: #696763;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 5px;
+}
+
+.product-information span {
+  display: inline-block;
+  margin-bottom: 8px;
+  margin-top: 18px;
+}
+
+.product-information span span {
+  color: #FE980F;
+  float: left;
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  margin-right: 20px;
+  margin-top: 0px;
+}
+.product-information span input {
+  border: 1px solid #DEDEDC;
+  color: #696763;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  height: 33px;
+  outline: medium none;
+  text-align: center;
+  width: 50px;
+}
+
+.product-information span label {
+  color: #696763;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  margin-right: 5px;
+}
+
+.share {
+  margin-top: 15px;
+}
+
       </style>
 
-  <div class="container" style="max-width: 1000px">
 
-    <div class="row g-3">
-
-          <div class="page-content page-container" id="page-content">
-            <div class="padding">
-                <div class="row container d-flex justify-content-center">
-                    <div class="col-md-10 grid-margin stretch-card">
-                        <div class="card">
-                            <div class="card-body">
-                              <div class="easyzoom easyzoom--overlay">
-                                <div class="center">
-                                  <div class="messages  " >
-                                    <small>-{{ product.discountprecent }} %</small>     
-                                  </div>
-                                  
-                              </div>
-                                <a href="{{ product.img.url }}"> 
-                                <img class="mainimage"  src="{{ product.img.url }}" height="400" /> 
-                              </a>
-                              </div>
-                              <h1 class="mb-0 h2 pe-4 pb-4">{{ product.title }}</h1>
-                                <p class="card-description">{{product.describtion}}</p>
-                               
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card-body p-4">
-          <div class="d-grid gap-2">
-          <div class="d-flex d-flex-inline justify-content-between">
-          
-          <s><div class="d-flex justify-content-between align-items-center" style="color : red ;">EG{{product.price}}</div></s>
-                 <div class="">
-                              <label for="select">Qty</label>
-                              <select id="select" class="h6" style="width:50px;height:40px;">
-                                  <option value="1">1</option>
-                                  <option value="2">2</option>
-                                  <option value="3">3</option>
-                                  <option value="4">4</option>
-                              </select>
-                  </div>
-                  <h3>Eg {{product.}}</h3>
-          </div>
-          <hr>
-          <button type="button" id="add-button" value="{{product.id}}" class="btn btn-success fw500">Add to basket</button>
-          <button type="button" id="add-button" value="{{product.id}}" class="btn btn-light fw500">Add to Favorites</button>
+<div class="col-sm-9 padding-right">
+  <div class="product-details"><!--product-details-->
+      <div class="col-sm-5">
+          <div class="view-product">
+              <img src="{{ product.img.url }}" alt="" />
+              
           </div>
       </div>
+      <div class="col-sm-7">
+          <div class="product-information"><!--/product-information-->
+              
+              <h2>{{ product.title }}</h2>
+              <p> <del> EG {{product.price}}  </del> </p>
+              
+              <span>
+                  <span>EG {{ product.discountprecent }}</span>
+                 
+                  <label for="select">Qty</label>
+                  <select id="select" class="h6" style="width:50px;height:40px;">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                  </select>
+                  <button type="button" id="add-button" value="{{product.id}}" class="btn btn-success fw500">Add to basket</button>
+              </span>
+              <p><b>Availability:</b> In Stock</p>
+              
+              <p><b>Description:</b> {{product.describtion}}</p>
+             
+          </div><!--/product-information-->
+      </div>
+  </div>
+</div>
 
 
-        </div>
-    </div>
- 
+
+
 
     
-
+ 
       
       
       
@@ -128,6 +244,32 @@
 </main>
 
 {% block javascript %}
+
+
+
+<script>
+  $(document).on('click', '#addone', function (e) {
+      var id = $(this).data("id")
+      e.preventDefault();
+
+      $.ajax({
+          type: 'POST',
+          url: "{% url 'basket:adding' %}",
+          data: {
+              productid:id,
+              
+              csrfmiddlewaretoken: "{{csrf_token}}",
+              action: 'post'
+          },
+          success: function (json) {
+             document.getElementById("basket-qty").innerHTML = json.qty
+
+          },
+          error: function (xhr, errmsg, err) {}
+      });
+  })
+</script>
+
 <script>
     $(document).on('click', '#add-button', function (e) {
         e.preventDefault();
@@ -152,30 +294,6 @@
     $(document).ready(function() {
 		var $easyzoom = $('.easyzoom').easyZoom();
 });
-</script>
-
-
-<script>
-  $(document).on('click', '#addone', function (e) {
-      var id = $(this).data("id")
-      e.preventDefault();
-
-      $.ajax({
-          type: 'POST',
-          url: "{% url 'basket:adding' %}",
-          data: {
-              productid:id,
-              
-              csrfmiddlewaretoken: "{{csrf_token}}",
-              action: 'post'
-          },
-          success: function (json) {
-             document.getElementById("basket-qty").innerHTML = json.qty
-
-          },
-          error: function (xhr, errmsg, err) {}
-      });
-  })
 </script>
 {%endblock javascript%}
 

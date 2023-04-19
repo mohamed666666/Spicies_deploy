@@ -41,8 +41,8 @@
         <div class="text-end">
 
           <div class="">Sub Total: <span class="fw-bold">£</span><div id="subtotal" class="d-inline-flex fw-bold"></div></div>
-          <div id="">Shipping <span class="small">(Next day delivery)</span>: <span class="fw-bold">£11.50</span></div>
-          <div class="pt-2">Total to pay: <span class="fw-bold h5">£</span><span id="total" class="fw-bold h5">{{total }}</span></div>
+          <div id="">Shipping <span class="small">(Next 48 hours delivery)</span>: <span class="fw-bold">EG 35.0</span></div>
+          <div class="pt-2">Total to pay: <span class="fw-bold h5">EG</span><span id="total" class="fw-bold h5">{{total }}</span></div>
 
         </div>
       </div>
@@ -69,9 +69,8 @@
 
         <div class="card mb-3 border-0 product-item" data-index="{{product.id}}">
           <div class="row g-0">
-            <div class="col-md-2 d-none d-md-block">
-              <img class="img-fluid mx-auto d-block" alt="Responsive image"
-                  src="{{ product.img.url }}" />
+            <div class="col-md-2">
+              <img src="{{ product.img.url }}" class="img-fluid" alt="Responsive image">
             </div>
             <div class="col-md-10 ps-md-3">
               <div class="card-body p-1">

@@ -9,57 +9,84 @@
 
 {% block content %}
 
+<section id="services" class="services section-bg">
+    <div class="container-fluid">
+      
+       <div class="row row-sm">
+          <div class="col-md-6 _boxzoom">
+             <div class="_product-images">
+                <div class="picZoomer">
+                   <img class="my_img" src="{{ product.img.url }}" alt="">
+                </div>
+             </div>
+          </div>
+          <div class="col-md-6">
+             <div class="_product-detail-content">
+                <p class="_p-name"> {{ product.title }} </p>
+                <div class="_p-price-box">
+                   <div class="p-list">
+                      <span> M.R.P. : <i class="fa fa-inr"></i> <del> {{product.price}}  </del>   </span>
+                      <span class="price"> {{ product.discountprecent }} </span>
+                   </div>
+                   <div class="_p-add-cart">
+                      <div class="_p-qty">
+                         <span>Add Quantity</span>
+                         <label for="select">Qty</label>
+                               <select id="select" class="h6" style="width:50px;height:40px;">
+                                   <option value="1">1</option>
+                                   <option value="2">2</option>
+                                   <option value="3">3</option>
+                                   <option value="4">4</option>
+                               </select>
+                      </div>
+                   </div>
+                   <div class="_p-features">
+                      <span> Description About this product:- </span>
+                      {{product.describtion}}
+                   </div>
+                   <button type="button" id="add-button" value="{{product.id}}" class="btn btn-success fw500">Add to basket</button>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </section>
+     
+ 
 <main>
 
-   
-    <div class="col-sm-3">
-        <div class="search_box pull-right">
-            <input type="text" placeholder="Search"/>
-        </div>
-
-
-<div class="container">
-    
-    <div class=" row row-cols-1 row-cols-md-4 ">
-        {% for product in products %}
-    
-        <div class="col mb-4 ">
-          <a href="{{product.get_prod_url}}" class="text-decoration-none"></a>
-            <div class="card product_item">
-                <div class="body">
-                    <div class="cp_img">
-                        <div class="center">
-                            <div class="messages  " >
-                              <small>-{{ product.discountprecent }} %</small>     
-                            </div>
-                        </div>
-
-                        <img src="{{ product.img.url }}" alt="Product" class="img-fluid">
-                        <div class="hover">
-                            <button type="button" data-id="{{product.id}}" id="addone" value="{{product.id}}" class="btn btn-success fw500">
-                                <i class="zmdi zmdi-shopping-cart"></i>
-                            </button>   
-                        </div>
-                    </div>
-                    <div class="product_details">
-                        <h5><a class="text-decoration-none" href="{{product.get_prod_url}}">{{product.title|slice:":50" }}</a></h5>
-                        <ul class="product_price list-unstyled">
-                            <li class="old_price">EG{{product.price}}</li>
-                            <li class="new_price">EG{{product.afterdiscont}}</li>
-                        </ul>
-                    </div>
-                </div>
-                
-            </div>
-          </a>
-        </div>
-    
-        {%endfor%}
-        
-    </div>
-</div>
-
   
+    <div class="col-sm-9 padding-right">
+        <div class="product-details"><!--product-details-->
+            <div class="col-sm-5">
+                <div class="view-product">
+                    <img src="{{product.img.url}}" alt="" />
+                    <h3>ZOOM</h3>
+                </div>
+            </div>
+            <div class="col-sm-7">
+                <div class="product-information"><!--/product-information-->
+                    
+                    <h2>Anne Klein Sleeveless Colorblock Scuba</h2>
+                    <p>Web ID: 1089772</p>
+                    
+                    <span>
+                        <span>US $59</span>
+                        <label>Quantity:</label>
+                        <input type="text" value="3" />
+                        <button type="button" class="btn btn-fefault cart">
+                            <i class="fa fa-shopping-cart"></i>
+                            Add to cart
+                        </button>
+                    </span>
+                    <p><b>Availability:</b> In Stock</p>
+                    <p><b>Condition:</b> New</p>
+                    <p><b>Brand:</b> E-SHOPPER</p>
+                   
+                </div><!--/product-information-->
+            </div>
+        </div>
+    </div>
 </main>
     {% block javascript %}
     <script>
@@ -91,365 +118,142 @@
 
 
 <style type="text/css">
-.messages {
-  position: absolute;
-  z-index: 20;
-  line-height: 18px;
- top: 20px;
- left: 0;
- height: 24px;
- width: auto;
-  text-align: center;
-  background-color: #FF5000;
-  padding-right: 20px;
-  padding-left: 10px;
-  color: white;
+   
+   .product-details{
+	overflow:hidden;
+}
+
+
+#similar-product {
+  margin-top: 40px;
+}
+
+
+#reviews {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.product-details {
+  margin-bottom: 40px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+
+
+.view-product {
+  position: relative;
+}
+
+.view-product img {
+  border: 1px solid #F7F7F0;
+  height: 380px;
+  width: 100%;
+}
+
+.view-product h3 {
+  background: #FE980F;
+  bottom: 0;
+  color: #FFFFFF;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
-  border-radius: 21px;
-  font-weight: 900;
-
-  }
-  
-
-
-
-body{
-    margin-top:5px;
-    background-color: #f4f7f6;
-}
-.c_review {
-    margin-bottom: 0
+  font-weight: 700;
+  margin-bottom: 0;
+  padding: 8px 20px;
+  position: absolute;
+  right: 0;
 }
 
-.c_review li {
-    margin-bottom: 16px;
-    padding-bottom: 13px;
-    border-bottom: 1px solid #e8e8e8
+#similar-product .carousel-inner .item{
+	padding-left:0px;
 }
 
-.c_review li:last-child {
-    margin: 0;
-    border: none
+#similar-product .carousel-inner .item img {
+  display: inline-block;
+  margin-left: 15px;
 }
 
-.c_review .avatar {
-    float: left;
-    width: 80px
+.item-control {
+  position: absolute;
+  top: 35%;
+}
+.item-control i {
+  background: #FE980F;
+  color: #FFFFFF;
+  font-size: 20px;
+  padding: 5px 10px;
 }
 
-.c_review .comment-action {
-    float: left;
-    width: calc(100% - 80px)
+.item-control i:hover{
+	background:#ccccc6;
 }
 
-.c_review .comment-action .c_name {
-    margin: 0
+.product-information {
+  border: 1px solid #F7F7F0;
+  overflow: hidden;
+  padding-bottom: 60px;
+  padding-left: 60px;
+  padding-top: 60px;
+  position: relative;
 }
 
-.c_review .comment-action p {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    max-width: 95%;
-    display: block
+.newarrival{
+	position:absolute;
+	top:0;
+	left:0
 }
 
-.product_item:hover .cp_img {
-    top: -40px
+.product-information h2 {
+  color: #363432;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  margin-top: 0;
 }
 
-.product_item:hover .cp_img img {
-    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22)
+.product-information p {
+  color: #696763;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 5px;
 }
 
-.product_item:hover .cp_img .hover {
-    display: block
+.product-information span {
+  display: inline-block;
+  margin-bottom: 8px;
+  margin-top: 18px;
 }
 
-.product_item .cp_img {
-    position: absolute;
-    top: 0px;
-    left: 50%;
-    transform: translate(-50%);
-    -webkit-transform: translate(-50%);
-    -ms-transform: translate(-50%);
-    -moz-transform: translate(-50%);
-    -o-transform: translate(-50%);
-    -khtml-transform: translate(-50%);
-    width: 100%;
-    padding: 15px;
-    transition: all 0.2s ease-in-out
+.product-information span span {
+  color: #FE980F;
+  float: left;
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  margin-right: 20px;
+  margin-top: 0px;
+}
+.product-information span input {
+  border: 1px solid #DEDEDC;
+  color: #696763;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  height: 33px;
+  outline: medium none;
+  text-align: center;
+  width: 50px;
 }
 
-.product_item .cp_img img {
-    transition: all 0.2s ease-in-out;
-    border-radius: 6px
+.product-information span label {
+  color: #696763;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  margin-right: 5px;
 }
 
-.product_item .cp_img .hover {
-    display: none;
-    text-align: center;
-    margin-top: 10px
+.share {
+  margin-top: 15px;
 }
 
-.product_item .product_details {
-    padding-top: 110%;
-    text-align: center
-}
-
-.product_item .product_details h5 {
-    margin-bottom: 5px
-}
-
-.product_item .product_details h5 a {
-    font-size: 16px;
-    color: #444
-}
-
-.product_item .product_details h5 a:hover {
-    text-decoration: none
-}
-
-.product_item .product_details .product_price {
-    margin: 0
-}
-
-.product_item .product_details .product_price li {
-    display: inline-block;
-    padding: 0 10px
-}
-
-.product_item .product_details .product_price .new_price {
-    font-weight: 600;
-    color: #ff4136
-}
-
-.product_item_list table tr td {
-    vertical-align: middle
-}
-
-.product_item_list table tr td h5 {
-    font-size: 15px;
-    margin: 0
-}
-
-.product_item_list table tr td .btn {
-    box-shadow: none !important
-}
-
-.product-order-list table tr th:last-child {
-    width: 145px
-}
-
-.preview {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column
-}
-
-.preview .preview-pic {
-    -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1
-}
-
-.preview .preview-thumbnail.nav-tabs {
-    margin-top: 15px;
-    font-size: 0
-}
-
-.preview .preview-thumbnail.nav-tabs li {
-    width: 20%;
-    display: inline-block
-}
-
-.preview .preview-thumbnail.nav-tabs li nav-link img {
-    max-width: 100%;
-    display: block
-}
-
-.preview .preview-thumbnail.nav-tabs li a {
-    padding: 0;
-    margin: 2px;
-    border-radius: 0 !important;
-    border-top: none !important;
-    border-left: none !important;
-    border-right: none !important
-}
-
-.preview .preview-thumbnail.nav-tabs li:last-of-type {
-    margin-right: 0
-}
-
-.preview .tab-content {
-    overflow: hidden
-}
-
-.preview .tab-content img {
-    width: 100%;
-    -webkit-animation-name: opacity;
-    animation-name: opacity;
-    -webkit-animation-duration: .3s;
-    animation-duration: .3s
-}
-
-.details {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column
-}
-
-.details .rating .stars {
-    display: inline-block
-}
-
-.details .sizes .size {
-    margin-right: 10px
-}
-
-.details .sizes .size:first-of-type {
-    margin-left: 40px
-}
-
-.details .colors .color {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 10px;
-    height: 2em;
-    width: 2em;
-    border-radius: 2px
-}
-
-.details .colors .color:first-of-type {
-    margin-left: 20px
-}
-
-.details .colors .not-available {
-    text-align: center;
-    line-height: 2em
-}
-
-.details .colors .not-available:before {
-    font-family: Material-Design-Iconic-Font;
-    content: "\f136";
-    color: #fff
-}
-
-@media screen and (max-width: 996px) {
-    .preview {
-        margin-bottom: 20px
-    }
-}
-
-@-webkit-keyframes opacity {
-    0% {
-        opacity: 0;
-        -webkit-transform: scale(3);
-        transform: scale(3)
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: scale(1);
-        transform: scale(1)
-    }
-}
-
-@keyframes opacity {
-    0% {
-        opacity: 0;
-        -webkit-transform: scale(3);
-        transform: scale(3)
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: scale(1);
-        transform: scale(1)
-    }
-}
-
-.cart-page .cart-table tr th:last-child {
-    width: 145px
-}
-
-.cart-table .quantity-grp {
-    width: 120px
-}
-
-.cart-table .quantity-grp .input-group {
-    margin-bottom: 0
-}
-
-.cart-table .quantity-grp .input-group-addon {
-    padding: 0 !important;
-    text-align: center;
-    background-color: #1ab1e3
-}
-
-.cart-table .quantity-grp .input-group-addon a {
-    display: block;
-    padding: 8px 10px 10px;
-    color: #fff
-}
-
-.cart-table .quantity-grp .input-group-addon a i {
-    vertical-align: middle
-}
-
-.cart-table .quantity-grp .form-control {
-    background-color: #fff
-}
-
-.cart-table .quantity-grp .form-control+.input-group-addon {
-    background-color: #1ab1e3
-}
-
-.ec-checkout .wizard .content .form-group .btn-group.bootstrap-select.form-control {
-    padding: 0
-}
-
-.ec-checkout .wizard .content .form-group .btn-group.bootstrap-select.form-control .btn-round.btn-simple {
-    padding-top: 12px;
-    padding-bottom: 12px
-}
-
-.ec-checkout .wizard .content ul.card-type {
-    font-size: 0
-}
-
-.ec-checkout .wizard .content ul.card-type li {
-    display: inline-block;
-    margin-right: 10px
-}
-
-.card {
-    background: #fff;
-    margin-bottom: 30px;
-    transition: .5s;
-    border: 0;
-    border-radius: .55rem;
-    position: relative;
-    width: 100%;
-    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);
-}
-
-.card .body {
-    font-size: 14px;
-    color: #424242;
-    padding: 20px;
-    font-weight: 400;
-}
 </style>
 {%endblock%}

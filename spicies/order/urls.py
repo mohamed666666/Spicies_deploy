@@ -9,7 +9,7 @@ app_name="order"
 urlpatterns = [
   path('placeorder/',views.placeorder , name='placeorder'),
   path("order/<int:ordid>/",views.ordercontent,name='ordercontent'),
-  path("test/",views.test)
+  path("all_for_admin/",views.allorders ),
   
 ]
 

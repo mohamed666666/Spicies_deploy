@@ -7,7 +7,7 @@ from basket.basket import Basket
 from django.http.response import JsonResponse
 
 from store.models import Product
-
+from django.contrib.admin.views.decorators import staff_member_required
 
 
 
@@ -15,7 +15,10 @@ def placeorder(request):
     basket = Basket(request)
     
     if request.method=="POST":
-        user_id = request.user.id
+        if request.user.is_authenticated:
+            user_id = request.user.id
+        else:
+            user_id=18
         of=OrderForm(request.POST)
        
         if of.is_valid:
@@ -27,7 +30,7 @@ def placeorder(request):
             print(basket.get_total_paid())
             print(basket.get_total_after_discount())
         
-            ord=order.objects.create(full_name=order_creator_name,address1=address,
+            ord=order.objects.create(user_id=user_id,full_name=order_creator_name,address1=address,
                                      address2=address,city=city,
                                      phone=Phone,total_paid=basket.get_total_paid(),
                                     discount=basket.get_total_after_discount())
@@ -70,6 +73,17 @@ def ordercontent(request,ordid ):
     return render(request,"order/orderContent.html",{"final":final})
 
 
+@staff_member_required
+def allorders(request):
+    ords=order.objects.all()
+    final=dict()
+    for ord in ords :
+        products=[]
+        for i in OrderItem.objects.filter(order_id=ord.id):
+            products.append(Product.objects.get(id=i.product_id))
+            final[ord]=products
+
+    return render(request,"order/allords.html",{"ords":final})
 
 def test(request):
     return render(request,"order/testorder.html")

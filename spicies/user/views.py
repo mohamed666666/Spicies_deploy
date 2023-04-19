@@ -30,7 +30,7 @@ def register(request):
             user=rf.save(commit=False)
             user.email=rf.cleaned_data["email"]
             user.set_password(rf.cleaned_data["password"])
-            user.is_active=False
+            user.is_active=True
             user.save()
             current_site=get_current_site(request)
             subject = 'Activate your Account'
@@ -40,8 +40,8 @@ def register(request):
                 'uid': urlsafe_base64_encode(force_bytes(user.pk)),
                 'token': account_activation_token.make_token(user),
             })
-            user.email_user(subject=subject, message=message)
-            return HttpResponse('registered succesfully and activation sent')
+            #user.email_user(subject=subject, message=message)
+            return HttpResponse('registered succesfully ')
     else:
         registerForm = RegisterationForm()
     return render(request, 'user/Register.html', {'form': registerForm})
