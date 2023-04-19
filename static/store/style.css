@@ -366,9 +366,7 @@
 * {
 	font-family: 'Montserrat', sans-serif;
 }
-body {
-	background: #f1fbff;
-}
+
 .section-padding {
 	padding: 100px 0;
 }
@@ -376,10 +374,7 @@ body {
 	height: 100vh;
 	min-height: 300px;
 }
-.carousel-caption {
-	bottom: 220px;
-	z-index: 2;
-}
+
 .carousel-caption h5 {
 	font-size: 45px;
 	text-transform: uppercase;
@@ -399,6 +394,14 @@ body {
 	height: 100%;
 	top: 0;
 	left: 0;
-	background: rgba(0, 0, 0, 0.7);
+	background: rgba(0, 0, 0, 0.25);
 	z-index: 1;
 }
+
+
+@media only screen and (min-width: 768px) {
+    #post-1634 > div > div.wp-block-coblocks-gallery-carousel.alignfull.mb-0.mt-0 > div > div{
+    height:120px !important;
+    }
+    }
+    
