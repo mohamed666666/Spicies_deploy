@@ -12,7 +12,7 @@ from django.http import HttpRequest
 def loadingdata(request):
     print("Clean old Products data")
     Product.objects.all().delete()
-    path ="/home/mohamed/Codes/Web/Foodies/store/raw_data.csv"
+    path ="/home/mohamed/Codes/Web/deployment/Spicies_deploy/spicies/data.csv"
         # Read the movie csv file as a dataframe
     productsdf = pd.read_csv(path)
         # Iterate each row in the dataframe
@@ -26,7 +26,7 @@ def loadingdata(request):
                 cat=Category(name=catname)
                 cat.save()
             title = row["name"]
-            describtion =str(row["descrption"])+str(row["name"])+str(row["ingridiance"])+str(row["weight"])+"g"
+            describtion =str(row["desc"])+str(row["name"])+str(row["ingridiance"])+str(row["weight"])+"g"
             
 
             try:

@@ -1,0 +1,129 @@
+id,name,weight,desc,price,pricedesc,kcl /100g,ingridiance,categries
+1,carmencita meat seasoning,75,Carmencita is an indonisian company has a great variety of spices that improves the taste of meat,50,44,Nutritional information (100 g):,"Salt, paprika, rosemary, pepper, savory, nutmeg, caraway and flavours",spices
+3,carmencita ginger seasoning,35,,35,33,Energy: 478 kJ / 114 kcal,,spices
+4,carmencita steak ibarian seasoning,66,,87,85,Fat: 2.2 g,,spices
+5,carmencita white paper,50,,45,43,Content: 50 g,White pepper.,spices
+6,CARMENCITA Basil,16,,39,37,Nutritional information (100 g):,Dehydrated spices.,spices
+7,carmancita fish ,20,,48,30,Energy: 310 kJ / 75 kcal,,spices
+8,carmencita organo ,8,,39,37,Fat: 2.0 g,Dehydrated spices,spices
+9,carmencita nutmeg,50,,79,71,of which saturated: 0.8 g,Dehydrated spices.,spices
+10,carmencita thyme,20,,39,37,Carbohydrates: 7.2 g,Dehydrated spices,spices
+11,carmancita chicen,75,,48,33,of which sugar: 3.5 g,Dehydrated spices.,spices
+12,carmancita rosemary,25,,34,32,Proteins: 2.0 g,Dehydrated spices.,spices
+13,carmaancita parsley,12,,39,37,Salt: 7.3 g,Dehydrated spices.,spices
+14,carmancita onion,38,,49,34,,Dehydrated spices.,spices
+15,carmancita garlic,60,,43,30,,Dehydrated spices.,spices
+16,carmencita cumin,47,,47,39,,Dehydrated spices.,spices
+18,Carmencita barbecue seasoning,62,,105,97,,dehydrate ,spices
+19,Carmencita Pizza & Pasta Seasoning,40,,87,81,,,spices
+20,Grains chill cheese,110,,54,47,,,spices
+21,Grains garrlic herb ,110,,54,47,,,spices
+22,Grains bagil,110,,54,47,,,spices
+23,Grains taco,110,,54,47,,,spices
+24,Grains cajun,110,,54,47,,,spices
+25,Grains veggies,110,,60,47,,,spices
+26,Grains italian,110,,60,47,,,spices
+28,Grains texas BBQ,110,,60,47,,,spices
+29,Grains chili lemon,110,,60,47,,,spices
+30,Grains chipotle,110,,60,47,,,spices
+31,Grains ranch,110,,60,47,,,spices
+31,Grains jerk,110,,60,47,,,spices
+32,Grains ,110,,54,47,,,spices
+33,Grains ,110,,54,47,,,spices
+34,Grains carrot,110,,65,57,,,spices
+35,Grains ,110,,54,47,,,spices
+36,Grains ,110,,54,47,,,spices
+37,Grains chile flakes,110,,45,38,,,spices
+38,Grains ,110,,54,47,,,spices
+39,Grains dill,110,,28,20,,,spices
+40,Grains lemon,110,,65,57,,,spices
+41,Grains marjoram,110,,54,47,,,spices
+42,Grains mustard,110,,33,26,,,spices
+43,Grains dried orange,110,,65,57,,,spices
+44,Grains chimichurri,110,,54,47,,,spices
+45,Grains thai coconut,110,,54,47,,,spices
+46,Grains sweet hony barbeque,110,,54,47,,,spices
+47,Grains lemon paper,110,,54,47,,,spices
+48,Grains sweet tangy barbeque,110,,54,47,,,spices
+49,Grains the sweet n smoky ,110,,54,47,,,spices
+50,Grains shiracha mango,110,,54,47,,,spices
+51,Grains the grill steak,110,,60,47,,,spices
+52,Grains hot chicken nashville,110,,54,47,,,spices
+53,grains Grains cayenne,110,,90,47,,,spices
+54,grains marjoram,110,,20,20,,,spices
+55,grains eib rub,110,,60,47,,,spices
+56,grains cheese,110,,60,47,,,spices
+57,Mehran Chicken Tikka Masala,1000,,145,100,,,SEASONINGS
+58,Mehran Chicken Seasoning  ,1000,,145,100,,,SEASONINGS
+59,mehran shawerma,1000,,145,100,,,SEASONINGS
+60,Mehran BBQ Spices ,1000,,145,100,,,SEASONINGS
+61,mehran byryanu ,125,,55,53,,,SEASONINGS
+62,mehran butter chicken,100,,55,53,,,SEASONINGS
+63,Mehran Fish Spices ,125,,55,53,,,SEASONINGS
+64,mehran shawerma,100,,55,53,,,SEASONINGS
+65,edit1,50,,26,24,,,SEASONINGS
+66,chicken tikka,50,,26,24,,,SEASONINGS
+67,Mehran Biryani spices  ,50,,26,24,,,SEASONINGS
+68,Mehran Fry/Karahi Gosht Spices ,50,,26,24,,,SEASONINGS
+69,Mehran butter meat,50,,26,24,,,SEASONINGS
+70,Mehran Paya Spices ,50,,26,24,,,SEASONINGS
+71,Mehran Shami Kabab Spices ,50,,26,24,,,SEASONINGS
+72,Mehran Seekh Kabab Masala Spices  ,50,,26,24,,,SEASONINGS
+73,mehran chicken butter spices,50,,26,24,,,SEASONINGS
+74,knor chicken stock powder,1000,,99,97,,,SEASONINGS
+75,Knorr Chicken Stock Cubes ,960,,89,87,,,SEASONINGS
+76,knor vegatables ,1000,,89,87,,,SEASONINGS
+77,Knorr Beef stock powder ,1000,,115,113,,,SEASONINGS
+78,knor demi glass ,750,,215,213,,,SEASONINGS
+79,Knorr Far east Seasoning ,800,,219,217,,,SEASONINGS
+80, Knorr Cream of mushroom soup ,1000,,159,157,,,SEASONINGS
+81,Knorr Cream of chicken soup ,1000,,156,154,,,SEASONINGS
+82,Knorr Lime seasoning powder ,400,,124,122,,,SEASONINGS
+83,knorr mix grill ,1000,,319,317,,,SEASONINGS
+84,Chios Gum Mastic ,10,,99,94,,,SEASONINGS
+85,Indian Green Cardamom,100,,75,73,,,SEASONINGS
+86,Indonesian Cloves,100,,65,63,,,SEASONINGS
+87,cinamon,100,,65,53,,,SEASONINGS
+88,Spanish smoked Paprika Packed ,100,,30,28,,,SEASONINGS
+89,sumac spices,100,,20,18,,,SEASONINGS
+90,Indian Golden Basmati Rice ,1000,,60,58,,,SEASONINGS
+91,Heinz Light Soy Sauce ,500,,84,76,,,sauce
+92,Heinz Superior Dark Soy Sauce ,500,,84,76,,,sauce
+93,Thailand Sweet Chili Sauce for Chicken ,750,,99,92,,,sauce
+94,Thailand Fish Sauce Squid,500,,109,107,,,sauce
+95,oyster sauce,500,,125,105,,,sauce
+96,Heinz Worcestershire sauce ,500,,119,107,,,sauce
+97,Heinz Oyster Sauce ,500,,84,77,,,sauce
+98,Suree Sriracha Chili Sauce,740,,149,132,,,sauce
+99,Suree Sweet and Sour Sauce,290,,73,67,,,sauce
+100,Suree Hoisin Sauce ,440,,101,92,,,sauce
+101,Heinz Sweet chili sauce,240,,53,51,,,sauce
+102,heinz soy sauce,150,,42,40,,,sauce
+103,Heinz Light Soy Sauce ,150,,42,40,,,sauce
+104,Heinz Dark Soy Sauce,150,,42,40,,,sauce
+105,Suree Teriyaki Sauce,295,,125,105,,,sauce
+106,Mother’s Tandoori Paste,300,,225,200,,,
+109,Sun dried Tomatoes,340,,108,97,,,Paste & Recipe
+110,Tabasco Habanero Sauce ,370,,76,68,,,Paste & Recipe
+112,Knorr Demi glace powder,60,,117,110,,,sauce
+113,kapri,750,,230,215,,,sauce
+114,Knorr Mashed Potato ,100,,47,39,,,SEASONINGS
+115,sumac ,2000,,405,400,,,SEASONINGS
+116,"Lipton green sancha tea, 25 teabags",100,,20,18,,,spices
+117,"Lipton earl grey classic tea, 25 teabags",25,,80,74,,,Beverages
+118,"Lipton English breakfast tea, 25 teabags",25,,80,74,,,Beverages
+119,"Lipton Delicate Mint , 25 teabags",25,,80,74,,,Beverages
+120,"Lipton Juicy forest fruits, 25 teabags",25,,80,74,,,Beverages
+121,"Lipton Camomile Linden, 25 teabags",25,,80,74,,,Beverages
+122,"Lipton Green tea & Intense Mint, 25 teabags",25,,80,74,,,Beverages
+123,Aachi Tamarind Paste ,25,,80,74,,,Beverages
+125,Thailand Red Curry Paste ,350,,75,73,,,Paste & Recipe
+126,Clovis whole grain mustard ,350,,135,122,,,Paste & Recipe
+127,pesto sun dried tomatoes ,350,,84,78,,,Paste & Recipe
+128,apple vinegar,350,,62,54,,,Paste & Recipe
+129,Balsamico vinegar,500,,75,73,,,vinegar
+130,Thailand Green Curry Paste,500,,74,72,,,vinegar
+131,Sun dried Tomatoes,400,,135,120,,,Paste & Recipe
+132,Tempura Savepak Thailand,370,,76,68,,,Paste & Recipe
+133,Thailand Bread Crumbs ,1000,,135,117,,,Paste & Recipe
+134,Thailand Bread ,1000,,180,157,,,

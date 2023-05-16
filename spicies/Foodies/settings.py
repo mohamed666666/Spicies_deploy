@@ -22,10 +22,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY")
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = int(os.environ.get("DEBUG" , default=0))
-
+#DEBUG=True
 #ALLOWED_HOSTS =os.environ.get("ALLOWED_HOSTS").split(" ")
 ALLOWED_HOSTS=["*"]
 
@@ -84,7 +83,6 @@ WSGI_APPLICATION = 'Foodies.wsgi.application'
 DATABASES = {
      'default': {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        #"NAME": BASE_DIR / "db.sqlite3",
         "NAME":os.environ.get("NAME"),
         "USER":os.environ.get("USER"),
         "PASSWORD":os.environ.get("PASSWORD"),
@@ -138,6 +136,7 @@ USE_TZ = True
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 
 
+APPS_DIR = os.path.join(BASE_DIR.parent,'nginx/')
 
 
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
