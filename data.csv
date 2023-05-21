@@ -1,0 +1,128 @@
+id,name,weight,desc,price,pricedesc,kcl /100g,ingridiance,categries,name_ar,categries_ar
+1,carmencita meat seasoning,75,Carmencita is an indonisian company has a great variety of spices that improves the taste of meat,50,44,Nutritional information (100 g):,"Salt, paprika, rosemary, pepper, savory, nutmeg, caraway and flavours",spices,كارمنسيتا لحمه ,توابل
+3,carmencita ginger seasoning,35,,35,33,Energy: 478 kJ / 114 kcal,,spices,كارمنسيتا جنزبيل ,توابل
+4,carmencita steak ibarian seasoning,66,,87,85,Fat: 2.2 g,,spices,كارمنسيتا استيك ,توابل
+5,carmencita white paper,50,,45,43,Content: 50 g,White pepper.,spices,كارمنسيتا فلفل ابيض ,توابل
+6,CARMENCITA Basil,16,,39,37,Nutritional information (100 g):,Dehydrated spices.,spices,كارمنسيتا ريحان,توابل
+7,carmancita fish ,20,,48,30,Energy: 310 kJ / 75 kcal,,spices,كارمنسيتا سمك,توابل
+8,carmencita organo ,8,,39,37,Fat: 2.0 g,Dehydrated spices,spices,كارمنسيتا اوريغانو,توابل
+9,carmencita nutmeg,50,,79,71,of which saturated: 0.8 g,Dehydrated spices.,spices,كارمنسيتا جوزالطيب ,توابل
+10,carmencita thyme,20,,39,37,Carbohydrates: 7.2 g,Dehydrated spices,spices,كارمنسيتا زعتر ,توابل
+11,carmancita chicen,75,,48,33,of which sugar: 3.5 g,Dehydrated spices.,spices,كارمنسيتا فراخ ,توابل
+12,carmancita rosemary,25,,34,32,Proteins: 2.0 g,Dehydrated spices.,spices,كارمنسيتا روز ماري ,توابل
+13,carmaancita parsley,12,,39,37,Salt: 7.3 g,Dehydrated spices.,spices,كارمنسيتا بقدونس ,توابل
+14,carmancita onion,38,,49,34,,Dehydrated spices.,spices,كارمنسيتا بصل,توابل
+15,carmancita garlic,60,,43,30,,Dehydrated spices.,spices,كارمنسيتا ثوم ,توابل
+16,carmencita cumin,47,,47,39,,Dehydrated spices.,spices,كارمنسيتا كمون ,توابل
+18,Carmencita barbecue seasoning,62,,105,97,,dehydrate ,spices,كارمنسيتا باربيكيو ,توابل
+19,Carmencita Pizza & Pasta Seasoning,40,,87,81,,,spices,كارمنسيتا بيتزا اند باستا ,توابل
+20,Grains chill cheese,110,,54,47,,,spices,جراينس جبنة,توابل
+21,Grains garrlic herb ,110,,54,47,,,spices,جراينس ثوم ,توابل
+22,Grains bagil,110,,54,47,,,spices,جراينس رقائق الخبز ,توابل
+23,Grains taco,110,,54,47,,,spices,جراينس تاكو ,توابل
+24,Grains cajun,110,,54,47,,,spices,جراينس كاجون,توابل
+25,Grains veggies,110,,60,47,,,spices,جراينس خضار,توابل
+26,Grains italian,110,,60,47,,,spices,جراينس ايطاليان,توابل
+28,Grains texas BBQ,110,,60,47,,,spices,جراينس تكساس باربيكيو ,توابل
+29,Grains chili lemon,110,,60,47,,,spices,جراينس فلفل وليمون ,توابل
+30,Grains chipotle,110,,60,47,,,spices,جراينس شيبوتلي,توابل
+31,Grains ranch,110,,60,47,,,spices,جراينس رانش,توابل
+31,Grains jerk,110,,60,47,,,spices,جراينس جارك,توابل
+32,Grains ,110,,54,47,,,spices,جراينس,توابل
+33,Grains ,110,,54,47,,,spices,جراينس,توابل
+34,Grains carrot,110,,65,57,,,spices,جراينس جزر,توابل
+35,Grains ,110,,54,47,,,spices,جراينس,توابل
+36,Grains ,110,,54,47,,,spices,جراينس,توابل
+37,Grains chile flakes,110,,45,38,,,spices,جراينس رقائق شيلي,توابل
+38,Grains ,110,,54,47,,,spices,جراينس استيك,توابل
+39,Grains dill,110,,28,20,,,spices,جراينس شبت,توابل
+40,Grains lemon,110,,65,57,,,spices,جراينس ليمون,توابل
+41,Grains marjoram,110,,54,47,,,spices,جراينس بردقوش,توابل
+42,Grains mustard,110,,33,26,,,spices,جراينس مستردة,توابل
+43,Grains dried orange,110,,65,57,,,spices,جراينس برتقال,توابل
+44,Grains chimichurri,110,,54,47,,,spices,جراينس تشيميتشوري,توابل
+45,Grains thai coconut,110,,54,47,,,spices,جراينس جوز الهند,توابل
+46,Grains sweet hony barbeque,110,,54,47,,,spices,جراينس باربيكيو بالعسل,توابل
+47,Grains lemon paper,110,,54,47,,,spices,جراينس ليمون بيبر ,توابل
+48,Grains sweet tangy barbeque,110,,54,47,,,spices,جراينس عسل بالباربيكيو,توابل
+49,Grains the sweet n smoky ,110,,54,47,,,spices,جراينس حار ,توابل
+50,Grains shiracha mango,110,,54,47,,,spices,جراينس سريراتشا مانجو,توابل
+51,Grains the grill steak,110,,60,47,,,spices,جراينس استيك,توابل
+52,Grains hot chicken nashville,110,,54,47,,,spices,جراينس فراخ ,توابل
+53,grains Grains cayenne,110,,90,47,,,spices,جراينس رقائق الفلفل,توابل
+54,grains marjoram,110,,20,20,,,spices,جراينس بروقوش,توابل
+55,grains eib rub,110,,60,47,,,spices,جراينس ريب ارب ,توابل
+56,grains cheese,110,,60,47,,,spices,جراينس جبنة,توابل
+57,Mehran Chicken Tikka Masala,1000,,145,100,,,SEASONINGS,مهران تكا ,توابل
+58,Mehran Chicken Seasoning  ,1000,,145,100,,,SEASONINGS,مهران فراخ ,توابل
+59,mehran shawerma,1000,,145,100,,,SEASONINGS,مهران شاورما ,توابل
+60,Mehran BBQ Spices ,1000,,145,100,,,SEASONINGS,مهران باربيكيو ,توابل
+61,mehran byryanu ,125,,55,53,,,SEASONINGS,ملاحه برياني ,توابل
+62,mehran butter chicken,100,,55,53,,,SEASONINGS,ملاحه فلفل ابيض,توابل
+63,Mehran Fish Spices ,125,,55,53,,,SEASONINGS,ملاحه سمك مقلي ,توابل
+64,mehran shawerma,100,,55,53,,,SEASONINGS,ملاحه شاورما ,توابل
+65,edit1,50,,26,24,,,SEASONINGS,فراخ بالذبدة ,توابل
+66,chicken tikka,50,,26,24,,,SEASONINGS,تكا,توابل
+67,Mehran Biryani spices  ,50,,26,24,,,SEASONINGS,برياني ,توابل
+68,Mehran Fry/Karahi Gosht Spices ,50,,26,24,,,SEASONINGS,لحم مقلي ,توابل
+69,Mehran butter meat,50,,26,24,,,SEASONINGS,لحم بالذبدة ,توابل
+70,Mehran Paya Spices ,50,,26,24,,,SEASONINGS, بايا كوارع ,توابل
+71,Mehran Shami Kabab Spices ,50,,26,24,,,SEASONINGS,كباب شامي ,توابل
+72,Mehran Seekh Kabab Masala Spices  ,50,,26,24,,,SEASONINGS,سيخ كباب ,توابل
+73,mehran chicken butter spices,50,,26,24,,,SEASONINGS,دجاج بالذبدة ,توابل
+74,knor chicken stock powder,1000,,99,97,,,SEASONINGS,مرقة الدجاج ,توابل
+75,Knorr Chicken Stock Cubes ,960,,89,87,,,SEASONINGS,مرقة مكعبات ,توابل
+76,knor vegatables ,1000,,89,87,,,SEASONINGS,مرقة خضار ,توابل
+77,Knorr Beef stock powder ,1000,,115,113,,,SEASONINGS,مرقة لحم ,توابل
+78,knor demi glass ,750,,215,213,,,SEASONINGS,ديمي جلاس ,توابل
+79,Knorr Far east Seasoning ,800,,219,217,,,SEASONINGS,شرق اقصي ,توابل
+80, Knorr Cream of mushroom soup ,1000,,159,157,,,SEASONINGS,كريمه مشروم ,توابل
+81,Knorr Cream of chicken soup ,1000,,156,154,,,SEASONINGS,كريمه الدجاج ,توابل
+82,Knorr Lime seasoning powder ,400,,124,122,,,SEASONINGS,مسحوق الليمون ,توابل
+83,knorr mix grill ,1000,,319,317,,,SEASONINGS,مكس جريل ,توابل
+84,Chios Gum Mastic ,10,,99,94,,,SEASONINGS,مستكة يوناني ,توابل
+85,Indian Green Cardamom,100,,75,73,,,SEASONINGS,حبهان ,توابل
+86,Indonesian Cloves,100,,65,63,,,SEASONINGS,قرنفل ,توابل
+87,cinamon,100,,65,53,,,SEASONINGS,قرفه ,توابل
+88,Spanish smoked Paprika Packed ,100,,30,28,,,SEASONINGS,بابريكا سايب ,توابل
+89,sumac spices,100,,20,18,,,SEASONINGS,سماق ,توابل
+90,Indian Golden Basmati Rice ,1000,,60,58,,,SEASONINGS,رز الغزال ,توابل
+91,Heinz Light Soy Sauce ,500,,84,76,,,sauce,صوص صويا لايت,توابل
+92,Heinz Superior Dark Soy Sauce ,500,,84,76,,,sauce,صوص صويا دارك,صوص
+93,Thailand Sweet Chili Sauce for Chicken ,750,,99,92,,,sauce,سويت شيلي تيلاندي ,صوص
+94,Thailand Fish Sauce Squid,500,,109,107,,,sauce,صوص السمك ,صوص
+95,oyster sauce,500,,125,105,,,sauce,اويستر تيلاندي ,صوص
+96,Heinz Worcestershire sauce ,500,,119,107,,,sauce,ورشيستر ,صوص
+97,Heinz Oyster Sauce ,500,,84,77,,,sauce,اويستر هاينز ,صوص
+98,Suree Sriracha Chili Sauce,740,,149,132,,,sauce,سريراتشا ,صوص
+99,Suree Sweet and Sour Sauce,290,,73,67,,,sauce,سويت اند ساور,صوص
+100,Suree Hoisin Sauce ,440,,101,92,,,sauce,هويسن,صوص
+101,Heinz Sweet chili sauce,240,,53,51,,,sauce,سويت شيلي هاينز,صوص
+102,heinz soy sauce,150,,42,40,,,sauce,صويا صوص احمر ,صوص
+103,Heinz Light Soy Sauce ,150,,42,40,,,sauce,صويا فاتح ,صوص
+104,Heinz Dark Soy Sauce,150,,42,40,,,sauce,صويا غامق,صوص
+105,Suree Teriyaki Sauce,295,,125,105,,,sauce,ترياكي,صوص
+109,Mother’s Tandoori Paste,340,,108,97,,,Paste & Recipe,معجون تندوري,معجون
+110,Sun dried Tomatoes,370,,76,68,,,Paste & Recipe,طماطم مجففه,معجون
+112,Tabasco Habanero Sauce ,60,,117,110,,,sauce,صوص تباسكو,صوص
+113,Knorr Demi glace powder,750,,230,215,,,sauce,صوص الديمي جلاس,صوص
+114,kapri,100,,47,39,,,SEASONINGS,مخلل كابري,صوص
+115,Knorr Mashed Potato ,2000,,405,400,,,SEASONINGS,بطاطس بيوريه,توابل
+116,sumac ,100,,20,18,,,spices,سماق ,توابل
+117,"Lipton green sancha tea, 25 teabags",25,,80,74,,,Beverages,شاي اخضر بالنعناع,شاي
+118,"Lipton earl grey classic tea, 25 teabags",25,,80,74,,,Beverages,شاي ايرل جراي ,شاي
+119,"Lipton English breakfast tea, 25 teabags",25,,80,74,,,Beverages,شاي بريكفاست,شاي
+120,"Lipton Delicate Mint , 25 teabags",25,,80,74,,,Beverages,شاي سانشا بالنعاع,شاي
+121,"Lipton Juicy forest fruits, 25 teabags",25,,80,74,,,Beverages,شاي فواكه بريه ,شاي
+122,"Lipton Camomile Linden, 25 teabags",25,,80,74,,,Beverages,شاي كاموميل,شاي
+123,"Lipton Green tea & Intense Mint, 25 teabags",25,,80,74,,,Beverages,شاي نعناع,شاي
+125,Aachi Tamarind Paste ,350,,75,73,,,Paste & Recipe,  معجون التمر الهندي  ,معجون
+126,Thailand Red Curry Paste ,350,,135,122,,,Paste & Recipe,معجون كاري اخضر ,معجون
+127,Clovis whole grain mustard ,350,,84,78,,,Paste & Recipe,معجون مسترده حب,معجون
+128,pesto sun dried tomatoes ,350,,62,54,,,Paste & Recipe,طماطم مجففه بيستو,معجون
+129,apple vinegar,500,,75,73,,,vinegar, خل تفاح,صوص
+130,Balsamico vinegar,500,,74,72,,,vinegar, خل بلسمك,صوص
+131,Thailand Green Curry Paste,400,,135,120,,,Paste & Recipe,   معجون كاري اخضر ,معجون
+132,Sun dried Tomatoes,370,,76,68,,,Paste & Recipe,طماطم مجففه,معجون
+133,Tempura Savepak Thailand,1000,,135,117,,,Paste & Recipe,  دقيق التمبورا ,نشويات
+134,Thailand Bread Crumbs ,1000,,180,157,,,,,

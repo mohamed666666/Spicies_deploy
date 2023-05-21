@@ -1,0 +1,264 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-20 16:30+0000\n"
+"PO-Revision-Date: 2023-05-18 00:39+0000\n"
+"Last-Translator:  User <admin2@test.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.9.9\n"
+
+#: Foodies/settings.py:142
+msgid "English"
+msgstr ""
+
+#: Foodies/settings.py:143
+msgid "Arabic"
+msgstr ""
+
+#: order/Forms.py:6
+msgid "Enter Full Name"
+msgstr ""
+
+#: order/Forms.py:7
+msgid "Address "
+msgstr ""
+
+#: order/Forms.py:8
+msgid "City "
+msgstr ""
+
+#: order/Forms.py:9
+msgid "Phone Number"
+msgstr ""
+
+#: order/Forms.py:19 templates/order/ordercreation.html:51
+msgid "Customer Name"
+msgstr ""
+
+#: order/Forms.py:21
+msgid "address"
+msgstr ""
+
+#: order/Forms.py:23
+msgid "City"
+msgstr ""
+
+#: store/models.py:13
+msgid "name"
+msgstr ""
+
+#: store/models.py:36
+msgid "title"
+msgstr ""
+
+#: store/models.py:38
+msgid "describtion"
+msgstr ""
+
+#: templates/base.html:36
+msgid "CATEGORIES"
+msgstr ""
+
+#: templates/base.html:44
+msgid "All"
+msgstr ""
+
+#: templates/base.html:74
+msgid "Shop"
+msgstr ""
+
+#: templates/base.html:88
+msgid "Logout"
+msgstr ""
+
+#: templates/base.html:101
+msgid "Login"
+msgstr ""
+
+#: templates/base.html:115
+msgid "Account"
+msgstr ""
+
+#: templates/base.html:137
+msgid "Basket"
+msgstr ""
+
+#: templates/base.html:157
+msgid "Search"
+msgstr ""
+
+#: templates/basket/basket_content.html:14
+msgid "Your Basket"
+msgstr ""
+
+#: templates/basket/basket_content.html:17
+msgid "Manage your items in your basket"
+msgstr ""
+
+#: templates/basket/basket_content.html:26
+msgid "Order"
+msgstr ""
+
+#: templates/basket/basket_content.html:29
+msgid "Shipping options"
+msgstr ""
+
+#: templates/basket/basket_content.html:36
+msgid "Next day delivery"
+msgstr ""
+
+#: templates/basket/basket_content.html:44
+msgid "Shipping"
+msgstr ""
+
+#: templates/basket/basket_content.html:44
+msgid "(Next 48 hours delivery)"
+msgstr ""
+
+#: templates/basket/basket_content.html:45
+msgid "Total to pay: "
+msgstr ""
+
+#: templates/basket/basket_content.html:56
+msgid "Checkout "
+msgstr ""
+
+#: templates/basket/basket_content.html:62
+msgid "Save for later "
+msgstr ""
+
+#: templates/basket/basket_content.html:88
+msgid "Update"
+msgstr ""
+
+#: templates/basket/basket_content.html:89
+msgid "Delete"
+msgstr ""
+
+#: templates/order/ordercreation.html:60
+msgid "Address"
+msgstr ""
+
+#: templates/order/ordercreation.html:63
+msgid "Please enter your shipping address."
+msgstr ""
+
+#: templates/order/ordercreation.html:68
+msgid "Country"
+msgstr ""
+
+#: templates/order/ordercreation.html:70
+msgid "Choose..."
+msgstr ""
+
+#: templates/order/ordercreation.html:71
+msgid "Egypt"
+msgstr ""
+
+#: templates/order/ordercreation.html:74
+msgid "Please select a valid country."
+msgstr ""
+
+#: templates/order/ordercreation.html:78
+msgid "State"
+msgstr ""
+
+#: templates/order/ordercreation.html:81
+msgid "Please provide a valid state."
+msgstr ""
+
+#: templates/order/ordercreation.html:85
+msgid "Phone"
+msgstr ""
+
+#: templates/order/ordercreation.html:92
+msgid "Place Order"
+msgstr ""
+
+#: templates/store/product.html:184
+msgid "Add to basket"
+msgstr ""
+
+#: templates/store/product.html:186
+msgid "Availability"
+msgstr ""
+
+#: templates/store/product.html:186
+msgid "In Stock"
+msgstr ""
+
+#: templates/store/product.html:188
+msgid "Description"
+msgstr ""
+
+#: templates/store/product.html:206
+msgid "Related"
+msgstr ""
+
+#: templates/user/Register.html:26 templates/user/login.html:52
+msgid "Create an account"
+msgstr ""
+
+#: templates/user/Register.html:27
+msgid "It's free and only takes a minute."
+msgstr ""
+
+#: templates/user/Register.html:40
+msgid "User Name"
+msgstr ""
+
+#: templates/user/Register.html:55
+msgid "Register"
+msgstr ""
+
+#: templates/user/Register.html:57
+msgid "Already have an account?"
+msgstr ""
+
+#: templates/user/login.html:41 user/froms.py:15
+msgid "Email"
+msgstr ""
+
+#: templates/user/login.html:44 user/froms.py:19
+msgid "Password"
+msgstr ""
+
+#: templates/user/login.html:48
+msgid "Sign in"
+msgstr ""
+
+#: user/froms.py:28
+msgid "Enter User Name"
+msgstr ""
+
+#: user/froms.py:60
+msgid "Username"
+msgstr ""
+
+#: user/froms.py:62
+msgid "E-mail"
+msgstr ""
+
+#: user/models.py:35
+msgid "You must provide an email address"
+msgstr ""
+
+#: user/models.py:48
+msgid "email address"
+msgstr ""
+
+#: user/models.py:52
+msgid "about"
+msgstr ""

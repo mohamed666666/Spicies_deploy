@@ -1,0 +1,101 @@
+$bg: #3E4649
+$span1: #E4F1FF
+$sliderback: #E4F1FF
+$aftergrill:#E4F1FF
+$fonta: FontAwesome
+$jose: 'Josefin Sans', sans-serif
+
+body
+	background-color: $bg
+	padding: 150px
+	font-family: $jose
+
+::after
+	padding-left: 15px
+
+::before
+	padding-right: 15px
+
+h1
+	color: $span
+	letter-spacing: 0.5em
+	font-size: 3.5em
+	display: none
+	font-family: 'Raleway Dots', cursive
+
+.slider
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	width: 300px
+	z-index: 999
+	background: $sliderback
+	transform: translateX(200%)
+	transition: all 320ms ease
+
+	ul
+		margin-top: 30%
+		padding: 0
+	
+		li
+			display: block
+			list-style: none
+			padding: 20px 25px
+			font-size: 20px
+			transition: all 320ms ease
+			cursor: pointer
+			color: #f0f0f0
+	
+			&.active, &:hover
+				background: #33444C
+		
+			&:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7)
+				font-family: $fonta
+					
+			&:nth-child(1):before
+				content: "\f13b"
+			&:nth-child(2):before
+				content: "\f210"
+			&:nth-child(3):before
+				content: "\f13c"
+			&:nth-child(4):before
+				content: "\f1cc"
+			&:nth-child(5):before
+				content: "\f1a3"
+			&:nth-child(6):before
+				content: "\f19a"
+			&:nth-child(7):before
+				content: "\f260"
+		
+.showslide
+	transform: translateX(0%)
+
+.wrapper
+	cursor: pointer
+	position: absolute
+	top: 30px
+	right: 25px
+	z-index: 1000
+	span
+		width: 40px
+		height: 1px
+		background: $span
+		display: block
+		margin-bottom: 10px
+		transition: all 320ms ease 
+	
+	.grill
+		color: $aftergrill
+
+		&:nth-child(1)
+			transform: rotate(45deg) translateY(7px)
+
+		&:nth-child(2)
+			display: none
+
+		&:nth-child(3)
+			transform: rotate(-45deg) translateY(-7px)
+	
+		
+		

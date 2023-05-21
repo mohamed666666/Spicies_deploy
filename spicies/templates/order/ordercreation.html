@@ -45,52 +45,51 @@
 
 
 
-
+                {% load i18n %}
                 <div class="row g-3">
                   <div class="col-sm-7">
-                    <label for="firstName" class="form-label">Customer Name</label>
+                    <label for="firstName" class="form-label">{% trans "Customer Name" %}</label>
                     {{form.fullname}}
-
+   
                     <div class="invalid-feedback">
                       Valid first name is required.
                     </div>
                   </div>
 
                   <div class="col-12">
-                    <label for="address" class="form-label">Address</label>
+                    <label for="address" class="form-label">{% trans "Address" %}</label>
                     {{form.address}}
                     <div class="invalid-feedback">
-                      Please enter your shipping address.
+                      {% trans "Please enter your shipping address." %}
                     </div>
                   </div>
 
                   <div class="col-md-5">
-                    <label for="country" class="form-label">Country</label>
+                    <label for="country" class="form-label">{% trans "Country" %}</label>
                     <select class="form-select" id="country" required>
-                      <option value="">Choose...</option>
-                      <option>Egypt</option>
+                      <option value="">{% trans "Choose..." %}</option>
+                      <option>{% trans "Egypt" %}</option>
                     </select>
                     <div class="invalid-feedback">
-                      Please select a valid country.
+                      {% trans "Please select a valid country." %}
                     </div>
                   </div>
                   <div class="col-md-4">
-                    <label for="state" class="form-label">State</label>
+                    <label for="state" class="form-label">{% trans "State" %}</label>
                     {{form.City}}
                     <div class="invalid-feedback">
-                      Please provide a valid state.
+                      {% trans "Please provide a valid state." %} 
                     </div>
                   </div>
                   <div class="col-md-3">
-                    <label for="Postcode" class="form-label">Phone</label>
+                    <label for="Postcode" class="form-label">{% trans "Phone" %}</label>
                     {{form.Phone}}
 
                   </div>
                 </div>
 
                 <hr class="my-4">
-                <button id="submit" class="btn btn-primary w-100 fw-bold">Place
-                  Order</button>
+                <button id="submit" class="btn btn-primary w-100 fw-bold">{% trans "Place Order" %}</button>
               </form>
             </div>
           </div>

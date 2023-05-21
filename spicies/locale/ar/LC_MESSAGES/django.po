@@ -1,0 +1,278 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-20 16:30+0000\n"
+"PO-Revision-Date: 2023-05-18 01:57+0000\n"
+"Last-Translator:  User <admin2@test.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Translated-Using: django-rosetta 0.9.9\n"
+
+#: Foodies/settings.py:142
+msgid "English"
+msgstr "انجليزي"
+
+#: Foodies/settings.py:143
+msgid "Arabic"
+msgstr "عربي"
+
+#: order/Forms.py:6
+msgid "Enter Full Name"
+msgstr "الاسم بالكامل"
+
+#: order/Forms.py:7
+msgid "Address "
+msgstr "العنوان بالتفاصيل "
+
+#: order/Forms.py:8
+msgid "City "
+msgstr "المدينة"
+
+#: order/Forms.py:9
+msgid "Phone Number"
+msgstr "رقم الموبايل "
+
+#: order/Forms.py:19 templates/order/ordercreation.html:51
+msgid "Customer Name"
+msgstr "اسم العميل"
+
+#: order/Forms.py:21
+#, fuzzy
+msgid "address"
+msgstr "العنوان بالتفاصيل "
+
+#: order/Forms.py:23
+msgid "City"
+msgstr "المدينة"
+
+#: store/models.py:13
+msgid "name"
+msgstr ""
+
+#: store/models.py:36
+msgid "title"
+msgstr ""
+
+#: store/models.py:38
+#, fuzzy
+#| msgid "Description"
+msgid "describtion"
+msgstr "الوصف"
+
+#: templates/base.html:36
+msgid "CATEGORIES"
+msgstr "الاصناف"
+
+#: templates/base.html:44
+msgid "All"
+msgstr "الكل"
+
+#: templates/base.html:74
+msgid "Shop"
+msgstr "تسوق"
+
+#: templates/base.html:88
+msgid "Logout"
+msgstr "تسجيل خروج"
+
+#: templates/base.html:101
+msgid "Login"
+msgstr "تسجيل دخول"
+
+#: templates/base.html:115
+msgid "Account"
+msgstr "حسابك"
+
+#: templates/base.html:137
+#, fuzzy
+msgid "Basket"
+msgstr "السلة"
+
+#: templates/base.html:157
+msgid "Search"
+msgstr "ابحث"
+
+#: templates/basket/basket_content.html:14
+#, fuzzy
+msgid "Your Basket"
+msgstr "السلة"
+
+#: templates/basket/basket_content.html:17
+msgid "Manage your items in your basket"
+msgstr " ادارة المنتجات داخل السلة "
+
+#: templates/basket/basket_content.html:26
+msgid "Order"
+msgstr "طلبك"
+
+#: templates/basket/basket_content.html:29
+msgid "Shipping options"
+msgstr "خيارات الشحن "
+
+#: templates/basket/basket_content.html:36
+msgid "Next day delivery"
+msgstr " التسليم خلال يوم"
+
+#: templates/basket/basket_content.html:44
+msgid "Shipping"
+msgstr "الشحن "
+
+#: templates/basket/basket_content.html:44
+msgid "(Next 48 hours delivery)"
+msgstr "التسليم خلال يومان "
+
+#: templates/basket/basket_content.html:45
+msgid "Total to pay: "
+msgstr "المجموع "
+
+#: templates/basket/basket_content.html:56
+msgid "Checkout "
+msgstr "اطلب الان"
+
+#: templates/basket/basket_content.html:62
+msgid "Save for later "
+msgstr " اضافة للمفضلة "
+
+#: templates/basket/basket_content.html:88
+msgid "Update"
+msgstr "تعديل"
+
+#: templates/basket/basket_content.html:89
+msgid "Delete"
+msgstr "مسح "
+
+#: templates/order/ordercreation.html:60
+#, fuzzy
+msgid "Address"
+msgstr "العنوان بالتفاصيل "
+
+#: templates/order/ordercreation.html:63
+msgid "Please enter your shipping address."
+msgstr "العنوان بالتفاصيل "
+
+#: templates/order/ordercreation.html:68
+msgid "Country"
+msgstr "البلد"
+
+#: templates/order/ordercreation.html:70
+msgid "Choose..."
+msgstr "الاختيارات"
+
+#: templates/order/ordercreation.html:71
+msgid "Egypt"
+msgstr "مصر"
+
+#: templates/order/ordercreation.html:74
+msgid "Please select a valid country."
+msgstr "من فضلك حدد الدولة "
+
+#: templates/order/ordercreation.html:78
+msgid "State"
+msgstr "المحافظة"
+
+#: templates/order/ordercreation.html:81
+msgid "Please provide a valid state."
+msgstr "من فضلك حدد المدينة"
+
+#: templates/order/ordercreation.html:85
+msgid "Phone"
+msgstr "رقم الموبايل "
+
+#: templates/order/ordercreation.html:92
+#, fuzzy
+msgid "Place Order"
+msgstr "سجل طلبك"
+
+#: templates/store/product.html:184
+#, fuzzy
+msgid "Add to basket"
+msgstr "ضيف للسلة"
+
+#: templates/store/product.html:186
+msgid "Availability"
+msgstr "المخزون"
+
+#: templates/store/product.html:186
+msgid "In Stock"
+msgstr "متوفر"
+
+#: templates/store/product.html:188
+msgid "Description"
+msgstr "الوصف"
+
+#: templates/store/product.html:206
+msgid "Related"
+msgstr "ذات صلة "
+
+#: templates/user/Register.html:26 templates/user/login.html:52
+msgid "Create an account"
+msgstr "أنشاء حساب"
+
+#: templates/user/Register.html:27
+msgid "It's free and only takes a minute."
+msgstr "حساب مجاني "
+
+#: templates/user/Register.html:40
+#, fuzzy
+msgid "User Name"
+msgstr "اسم المستخدم"
+
+#: templates/user/Register.html:55
+msgid "Register"
+msgstr "تسجيل"
+
+#: templates/user/Register.html:57
+#, fuzzy
+msgid "Already have an account?"
+msgstr " لديك حساب "
+
+#: templates/user/login.html:41 user/froms.py:15
+msgid "Email"
+msgstr "البريد الالكتروني "
+
+#: templates/user/login.html:44 user/froms.py:19
+msgid "Password"
+msgstr "الرقم السري "
+
+#: templates/user/login.html:48
+msgid "Sign in"
+msgstr "تسجيل دخول "
+
+#: user/froms.py:28
+#, fuzzy
+msgid "Enter User Name"
+msgstr "اسم المستخدم"
+
+#: user/froms.py:60
+#, fuzzy
+msgid "Username"
+msgstr "اسم المستخدم"
+
+#: user/froms.py:62
+#, fuzzy
+msgid "E-mail"
+msgstr "البريد الالكتروني "
+
+#: user/models.py:35
+msgid "You must provide an email address"
+msgstr "يجب ادخال البريد الالكتروني"
+
+#: user/models.py:48
+msgid "email address"
+msgstr " البريد الالكتروني"
+
+#: user/models.py:52
+msgid "about"
+msgstr ""
