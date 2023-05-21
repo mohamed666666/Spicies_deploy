@@ -1,5 +1,5 @@
 
-{% extends "../base.html"%}
+
 
 
 {%load static %}
@@ -8,252 +8,69 @@
 {% block title%} {%endblock %}
 
 {% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar using HTML, CSS and Javascript</title>
+    <link rel="stylesheet" href="{%static 'nav/style.css'%}">
+</head>
+<body>
+  <header>     
+    <div class="header-left">
+        <div class="logo">
+           
 
-<section id="services" class="services section-bg">
-    <div class="container-fluid">
-      
-       <div class="row row-sm">
-          <div class="col-md-6 _boxzoom">
-             <div class="_product-images">
-                <div class="picZoomer">
-                   <img class="my_img" src="{{ product.img.url }}" alt="">
-                </div>
-             </div>
-          </div>
-          <div class="col-md-6">
-             <div class="_product-detail-content">
-                <p class="_p-name"> {{ product.title }} </p>
-                <div class="_p-price-box">
-                   <div class="p-list">
-                      <span> M.R.P. : <i class="fa fa-inr"></i> <del> {{product.price}}  </del>   </span>
-                      <span class="price"> {{ product.discountprecent }} </span>
-                   </div>
-                   <div class="_p-add-cart">
-                      <div class="_p-qty">
-                         <span>Add Quantity</span>
-                         <label for="select">Qty</label>
-                               <select id="select" class="h6" style="width:50px;height:40px;">
-                                   <option value="1">1</option>
-                                   <option value="2">2</option>
-                                   <option value="3">3</option>
-                                   <option value="4">4</option>
-                               </select>
-                      </div>
-                   </div>
-                   <div class="_p-features">
-                      <span> Description About this product:- </span>
-                      {{product.describtion}}
-                   </div>
-                   <button type="button" id="add-button" value="{{product.id}}" class="btn btn-success fw500">Add to basket</button>
-                </div>
-             </div>
-          </div>
-       </div>
-    </div>
- </section>
-     
- 
-<main>
-
-  
-    <div class="col-sm-9 padding-right">
-        <div class="product-details"><!--product-details-->
-            <div class="col-sm-5">
-                <div class="view-product">
-                    <img src="{{product.img.url}}" alt="" />
-                    <h3>ZOOM</h3>
-                </div>
-            </div>
-            <div class="col-sm-7">
-                <div class="product-information"><!--/product-information-->
-                    
-                    <h2>Anne Klein Sleeveless Colorblock Scuba</h2>
-                    <p>Web ID: 1089772</p>
-                    
-                    <span>
-                        <span>US $59</span>
-                        <label>Quantity:</label>
-                        <input type="text" value="3" />
-                        <button type="button" class="btn btn-fefault cart">
-                            <i class="fa fa-shopping-cart"></i>
-                            Add to cart
-                        </button>
-                    </span>
-                    <p><b>Availability:</b> In Stock</p>
-                    <p><b>Condition:</b> New</p>
-                    <p><b>Brand:</b> E-SHOPPER</p>
-                   
-                </div><!--/product-information-->
-            </div>
         </div>
-    </div>
-</main>
-    {% block javascript %}
-    <script>
-    $(document).on('click', '#addone', function (e) {
-        var id = $(this).data("id")
-        e.preventDefault();
-
-        $.ajax({
-            type: 'POST',
-            url: "{% url 'basket:adding' %}",
-            data: {
-                productid:id,
+        <nav>
+            <ul>
                 
-                csrfmiddlewaretoken: "{{csrf_token}}",
-                action: 'post'
-            },
-            success: function (json) {
-               document.getElementById("basket-qty").innerHTML = json.qty
+                <li class="nav-item dropdown">
+                        
+            </li>
+                
 
-            },
-            error: function (xhr, errmsg, err) {}
-        });
-    })
+
+
+                <li>
+                   
+                </li>
+                <li>
+                    
+                </li>
+                <li>
+                    
+                </li>
+
+
+                <li>
+                   
+                    <form class=" form-check-inline">
+                        <input class="form-control me-2" type="search" placeholder="Search products or FAQ"
+                            aria-label="Search">
+                        <button class="" type="submit"></button>
+                    </form>
+    
+                </li>
+                <li>
+                    
+                </li>
+            </ul>
+           
+        </nav>
+    
+</header>
 
   
-</script>
-
-{%endblock javascript%}
-
-
-<style type="text/css">
-   
-   .product-details{
-	overflow:hidden;
-}
-
-
-#similar-product {
-  margin-top: 40px;
-}
-
-
-#reviews {
-  padding-left: 25px;
-  padding-right: 25px;
-}
-
-.product-details {
-  margin-bottom: 40px;
-  overflow: hidden;
-  margin-top: 10px;
-}
 
 
 
-.view-product {
-  position: relative;
-}
 
-.view-product img {
-  border: 1px solid #F7F7F0;
-  height: 380px;
-  width: 100%;
-}
 
-.view-product h3 {
-  background: #FE980F;
-  bottom: 0;
-  color: #FFFFFF;
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  margin-bottom: 0;
-  padding: 8px 20px;
-  position: absolute;
-  right: 0;
-}
 
-#similar-product .carousel-inner .item{
-	padding-left:0px;
-}
+</body>
+</html>
 
-#similar-product .carousel-inner .item img {
-  display: inline-block;
-  margin-left: 15px;
-}
 
-.item-control {
-  position: absolute;
-  top: 35%;
-}
-.item-control i {
-  background: #FE980F;
-  color: #FFFFFF;
-  font-size: 20px;
-  padding: 5px 10px;
-}
-
-.item-control i:hover{
-	background:#ccccc6;
-}
-
-.product-information {
-  border: 1px solid #F7F7F0;
-  overflow: hidden;
-  padding-bottom: 60px;
-  padding-left: 60px;
-  padding-top: 60px;
-  position: relative;
-}
-
-.newarrival{
-	position:absolute;
-	top:0;
-	left:0
-}
-
-.product-information h2 {
-  color: #363432;
-  font-family: 'Roboto', sans-serif;
-  font-size: 20px;
-  margin-top: 0;
-}
-
-.product-information p {
-  color: #696763;
-  font-family: 'Roboto', sans-serif;
-  margin-bottom: 5px;
-}
-
-.product-information span {
-  display: inline-block;
-  margin-bottom: 8px;
-  margin-top: 18px;
-}
-
-.product-information span span {
-  color: #FE980F;
-  float: left;
-  font-family: 'Roboto', sans-serif;
-  font-size: 30px;
-  font-weight: 700;
-  margin-right: 20px;
-  margin-top: 0px;
-}
-.product-information span input {
-  border: 1px solid #DEDEDC;
-  color: #696763;
-  font-family: 'Roboto', sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  height: 33px;
-  outline: medium none;
-  text-align: center;
-  width: 50px;
-}
-
-.product-information span label {
-  color: #696763;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-  margin-right: 5px;
-}
-
-.share {
-  margin-top: 15px;
-}
-
-</style>
-{%endblock%}
+{% endblock%}

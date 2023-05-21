@@ -1,21 +1,22 @@
 from django import forms
 
+from django.utils.translation import gettext_lazy as _
 
 
 from django.contrib.auth.forms import (AuthenticationForm, PasswordResetForm,
                                        SetPasswordForm)
-
+ 
 from .models import UserBase
 
 
 class UserLoginForm(AuthenticationForm):
 
-    username = forms.CharField(widget=forms.TextInput(
-        attrs={'class': 'form-control mb-3', 'placeholder': 'Email', 'id': 'login-username'}))
+    email = forms.CharField(widget=forms.TextInput(
+        attrs={'class': 'form-control mb-3', 'placeholder':_( 'Email'), 'id': 'login-username'}))
     password = forms.CharField(widget=forms.PasswordInput(
         attrs={
             'class': 'form-control',
-            'placeholder': 'Password',
+            'placeholder': _('Password'),
             'id': 'login-pwd',
         }
     ))
@@ -24,7 +25,7 @@ class UserLoginForm(AuthenticationForm):
 
 
 class RegisterationForm(forms.ModelForm):
-    user_name=forms.CharField(label="Enter User Name",max_length=50,min_length=10,help_text="Required")
+    user_name=forms.CharField(label=_("Enter User Name"),max_length=50,min_length=10,help_text="Required")
     email=forms.EmailField(max_length=100,error_messages={"reqired":"sorry you must provide an email"})
     password=forms.CharField(label="Password",widget=forms.PasswordInput)
     password2=forms.CharField(label="Repeat Password",widget=forms.PasswordInput)
@@ -56,9 +57,9 @@ class RegisterationForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['user_name'].widget.attrs.update(
-            {'class': 'form-control mb-3', 'placeholder': 'Username'})
+            {'class': 'form-control mb-3', 'placeholder': _('Username')})
         self.fields['email'].widget.attrs.update(
-            {'class': 'form-control mb-3', 'placeholder': 'E-mail', 'name': 'email', 'id': 'id_email'})
+            {'class': 'form-control mb-3', 'placeholder': _('E-mail'), 'name': 'email', 'id': 'id_email'})
         self.fields['password'].widget.attrs.update(
             {'class': 'form-control mb-3', 'placeholder': 'Password'})
         self.fields['password2'].widget.attrs.update(

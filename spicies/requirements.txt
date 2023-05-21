@@ -7,3 +7,4 @@ Pillow==9.4.0
 psycopg2-binary
 six
 django-ses
+django-rosetta

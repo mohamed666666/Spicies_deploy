@@ -2,6 +2,8 @@
 
 
 {%load static %}
+{% load i18n %}
+
 
 
 {% block title%} Product {%endblock %}
@@ -165,10 +167,13 @@
       </div>
       <div class="col-sm-7">
           <div class="product-information"><!--/product-information-->
-              
-              <h2>{{ product.title }}</h2>
+            {% if LANGUAGE_CODE == 'ar'%}
+              <h2>{{ product.title_ar }}</h2>
               <p> <del> EG {{product.price}}  </del> </p>
-              
+            {% else %}
+            <h2>{{ product.title }}</h2>
+              <p> <del> EG {{product.price}}  </del> </p>
+            {%endif%}
               <span>
                   <span>EG {{ product.afterdiscont }}</span>
                  
@@ -179,11 +184,11 @@
                       <option value="3">3</option>
                       <option value="4">4</option>
                   </select>
-                  <button type="button" id="add-button" value="{{product.id}}" class="btn btn-success fw500">Add to basket</button>
+                  <button type="button" id="add-button" value="{{product.id}}" class="btn btn-success fw500">{% trans "Add to basket" %}</button>
               </span>
-              <p><b>Availability:</b> In Stock</p>
+              <p><b>{% trans "Availability" %}:</b>{% trans "In Stock" %} </p>
               
-              <p><b>Description:</b> {{product.describtion}}</p>
+              <p><b>{% trans "Description" %}:</b>   {% if LANGUAGE_CODE == 'ar'%} {{product.describtion_ar}} {%else%} {{product.describtion}}{%endif%}</p>
              
           </div><!--/product-information-->
       </div>
@@ -201,10 +206,9 @@
       
       
         <div class="container">
-          <div class="pb-3 h5">Related </div>
+          <div class="pb-3 h5">{% trans "Related" %} </div>
             <div class=" row row-cols-1 row-cols-md-4 ">
                 {% for product in prods %}
-            
                 <div class="col mb-4 ">
                   <a href="{{product.get_prod_url}}" class="text-decoration-none"></a>
                     <div class="card product_item">
@@ -224,7 +228,12 @@
                                 </div>
                             </div>
                             <div class="product_details">
-                                <h5><a class="text-decoration-none" href="{{product.get_prod_url}}">{{product.title|slice:":50" }}</a></h5>
+                              {% if LANGUAGE_CODE == 'ar'%}
+                                <h5><a class="text-decoration-none" href="{{product.get_prod_url}}">{{product.title_ar|slice:":50" }}</a></h5>
+                               
+                              {%else%}
+                              <h5><a class="text-decoration-none" href="{{product.get_prod_url}}">{{product.title|slice:":50" }}</a></h5>
+                              {%endif%}
                                 <ul class="product_price list-unstyled">
                                     <li class="old_price">EG{{product.price}}</li>
                                     <li class="new_price">EG{{product.afterdiscont}}</li>

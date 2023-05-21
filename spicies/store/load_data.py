@@ -12,7 +12,7 @@ from django.http import HttpRequest
 def loadingdata(request):
     print("Clean old Products data")
     Product.objects.all().delete()
-    path ="/home/mohamed/Codes/Web/deployment/Spicies_deploy/spicies/data.csv"
+    path ="/home/mohamed/Codes/Web/deployment/Spicies_deploy/data.csv"
         # Read the movie csv file as a dataframe
     productsdf = pd.read_csv(path)
         # Iterate each row in the dataframe
@@ -23,11 +23,12 @@ def loadingdata(request):
             try:
                 cat=Category.objects.get(name=catname)
             except ObjectDoesNotExist:
-                cat=Category(name=catname)
+                cat=Category(name=catname,name_ar=row["categries_ar"])
                 cat.save()
             title = row["name"]
-            describtion =str(row["desc"])+str(row["name"])+str(row["ingridiance"])+str(row["weight"])+"g"
-            
+            title_ar=row["name_ar"]
+            describtion =str(row["name"])+" "+str(row["weight"])+"g"
+            describtion_ar="g"+str(row["name_ar"])+" "+str(row["categries_ar"])+" "+str(row["weight"])
 
             try:
                 imgtemp =ImageFile(open("media/images/"+str(row["id"])+".jpg", "rb")) 
@@ -41,7 +42,9 @@ def loadingdata(request):
             product=Product(created_by=request.user ,
                  category=cat,
                             title=title,
+                            title_ar=title_ar,
                             describtion=describtion,
+                            describtion_ar=describtion_ar,
                             img=imgtemp,
                             price=price,
                             afterdiscont=afterdisc,
