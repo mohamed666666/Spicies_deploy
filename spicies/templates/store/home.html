@@ -70,7 +70,7 @@
                           <h5><a class="text-decoration-none" href="{{product.get_prod_url}}">{{product.title_ar|slice:":50" }}</a></h5>
                          
                         {%else%}
-                        <h5><a class="text-decoration-none" href="{{product.get_prod_url}}">{{product.title|slice:":50" }}</a></h5>
+                        <h5><a class="text-decoration-none" href="{{product.get_prod_url}}">{{product.title|slice:":12" }}..</a></h5>
                         {%endif%}
                           <ul class="product_price list-unstyled">
                               <li class="old_price">EG{{product.price}}</li>
